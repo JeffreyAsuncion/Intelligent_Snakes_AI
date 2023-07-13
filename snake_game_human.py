@@ -7,6 +7,12 @@ pygame.init()
 font = pygame.font.Font('arial.ttf', 25)
 #font = pygame.font.SysFont('arial', 25)
 
+# reset
+# reward
+# play(action) -->> direction
+# game_iteration
+# is_collision
+
 class Direction(Enum):
     RIGHT = 1
     LEFT = 2
