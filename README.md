@@ -57,7 +57,7 @@ Train an AI to Play Snake
 
 * Def train
 
-* Get state will take 
+* get_state will take 
 
 
 State (11 values)
@@ -68,4 +68,16 @@ State (11 values)
  'food left', 'food right',
  'food up', 'food down'
 ]
+
+* remember
+
+* train_short_memory
+
+* train_long_memory
+
+# Part Four
+
+* implement model
+* trainer
+* plotting
 
