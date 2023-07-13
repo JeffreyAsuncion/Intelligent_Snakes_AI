@@ -81,3 +81,7 @@ State (11 values)
 * trainer
 * plotting
 
+for our linear Qnet
+
+to do the actual training and optimization 
+we need to create a class QTrainer
