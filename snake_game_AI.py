@@ -54,7 +54,7 @@ class SnakeGameAI:
         self.score = 0
         self.food = None
         self._place_food()
-        self.frame_iteration
+        self.frame_iteration = 0
     
     def _place_food(self):
         x = random.randint(0, (self.w-BLOCK_SIZE )//BLOCK_SIZE )*BLOCK_SIZE 
@@ -64,6 +64,7 @@ class SnakeGameAI:
             self._place_food()
         
     def play_step(self, action):
+        self.frame_iteration += 1
         # 1. collect user input
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -75,14 +76,17 @@ class SnakeGameAI:
         self.snake.insert(0, self.head)
         
         # 3. check if game over
+        reward = 0
         game_over = False
-        if self._is_collision():
+        if self._is_collision() or self.frame_iteration > 100*len(self.snake):
             game_over = True
-            return game_over, self.score
+            reward = -10
+            return reward, game_over, self.score
             
         # 4. place new food or just move
         if self.head == self.food:
             self.score += 1
+            reward = 10
             self._place_food()
         else:
             self.snake.pop()
@@ -91,7 +95,7 @@ class SnakeGameAI:
         self._update_ui()
         self.clock.tick(SPEED)
         # 6. return game over and score
-        return game_over, self.score
+        return reward, game_over, self.score
     
     def _is_collision(self):
         # hits boundary
