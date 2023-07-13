@@ -134,8 +134,9 @@ class SnakeGameAI:
         elif np.array_equal(action, [0, 1, 0]):
             next_idx = (idx + 1) % 4
             new_dir = clock_wise[idx] # right turn R --> D --> L --> U
-        else:   # [0, 0, 1] left turn R --> U -->> L -->> D
+        else:   
             next_idx = (idx - 1) % 4
+            new_dir = clock_wise[idx] # [0, 0, 1] left turn R --> U -->> L -->> D
             
         self.direction = new_dir
         
