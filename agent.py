@@ -103,7 +103,7 @@ class Agent:
 def train():
     plot_scores = []
     plot_mean_scores = []
-    total_scorce  = 0
+    total_score  = 0
     record = 0
     agent = Agent()
     game = SnakeGameAI()
