@@ -45,3 +45,27 @@ Train an AI to Play Snake
 
 
 # Part 3 - Implement the model
+
+* Rename to game.py
+* And setup the agent
+
+* We will use a deque to hold the moves
+
+* Notes at video 44:10
+
+* Def the init
+
+* Def train
+
+* Get state will take 
+
+
+State (11 values)
+[
+ 'danger straight', 'danger right', 'danger left',
+ 'direction left', 'direction right', 
+ 'direction up', 'direction down',
+ 'food left', 'food right',
+ 'food up', 'food down'
+]
+
