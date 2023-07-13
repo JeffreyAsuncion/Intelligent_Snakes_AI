@@ -15,3 +15,14 @@ source pygame_env/bin/activate
 pip install pygame
 pip install torch torchvision
 pip install matplotlib ipython
+
+# Part 2
+
+
+* reset
+* reward
+* play(action) -->> direction
+* game_iteration
+* is_collision
+
+
